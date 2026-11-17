@@ -10,7 +10,6 @@
   margin: 20px auto;
   padding: 15px;
   color: #333;
-  font-size: 26px;
 }
 
 /* Kitob bo‘limlari */
@@ -50,11 +49,7 @@
   line-height: 1.5;
   text-align: left;
 }
-.book-paragraph p {
-  margin: 0;
-  font-size: 22px;
-  text-align: justify;
-}
+
 
 /* So‘zboshi */
 .book-preface {
