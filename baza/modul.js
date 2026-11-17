@@ -1,1 +1,1 @@
-document.getElementById("p2").innerHTML = '<b id="yillar"></b>';
+document.getElementById("p2").innerHTML = '<b id="p1"></b>';
