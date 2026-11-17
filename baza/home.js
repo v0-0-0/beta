@@ -1,1 +1,21 @@
-document.getElementById("desktop").innerHTML = "<div class='w3-hide-small w3-hide-medium'><div class='w3-sidebar w3-bar-block w3-collapse w3-white w3-card' style='width:200px;z-index:2'><h5 class='w3-bar-item w3-hide-medium w3-hide-small'>Menu</h5><a class='w3-bar-item w3-button' href='javascript:void(0)'>Link 1</a><a class='w3-bar-item w3-button' href='javascript:void(0)'>Link 2</a><a class='w3-bar-item w3-button' href='javascript:void(0)'>Link 3</a></div></div>";
+document.getElementById("app").innerHTML = `
+
+<header>
+    <h1>Uralbek UZ</h1>
+    <nav>
+        <a href="/">Bosh sahifa</a>
+        <a href="/about/">Biz haqimizda</a>
+        <a href="/projects/">Loyihalar</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Xush kelibsiz!</h2>
+    <p>Uralbek UZ rasmiy veb-sayti.</p>
+</main>
+
+<footer>
+    <p>© 2026 Uralbek UZ</p>
+</footer>
+
+`;
