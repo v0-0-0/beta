@@ -1,1 +1,1 @@
-document.getElementById("desctop").innerHTML = "New text!";
+document.getElementById("desktop").innerHTML = "";
