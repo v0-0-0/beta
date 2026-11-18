@@ -13,7 +13,9 @@ body{margin:0}a{text-decoration:none}
     }
     .header240 {
         padding-top: 6px;
-        padding-left: 22;
+        padding-left: 22px;
+        padding-bottom: 5px;
+        padding-right: 22;
     }
 }
 
