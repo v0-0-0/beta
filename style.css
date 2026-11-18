@@ -18,7 +18,9 @@ body{margin:0}a{text-decoration:none}
         padding-right: 22px;
     }
     .logotip240 {
-        padd
+        padding-left: 2px;
+        font-size: 26px;
+        
     }
 }
 
