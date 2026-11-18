@@ -17,7 +17,7 @@ body{margin:0}a{text-decoration:none}
         padding-bottom: 5px;
         padding-right: 22px;
     }
-    .logotip240 {
+    .logo240 {
         padding-left: 2px;
         font-size: 26px;
         color: #02A4D3;
@@ -25,7 +25,7 @@ body{margin:0}a{text-decoration:none}
         font-weight: bold;
         -webkit-user-select: none;
         -ms-user-select: none;
-        use
+        user-select: none;
     }
 }
 
