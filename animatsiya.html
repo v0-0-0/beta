@@ -12,11 +12,12 @@
     border-radius: 5px;
     background: linear-gradient(90deg, #eee, #fff, #eee);
     background-size: 200% 100%;
-    animation: loading 1s infinite;
+    animation: loading 1s linear infinite;
 }
 
 @keyframes loading {
-    to { background-position: -200% 0; }
+    from { background-position: 100% 0; }
+    to   { background-position: -100% 0; }
 }
 </style>
 </head>
