@@ -2,37 +2,40 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-.skeleton {
-    height: 20px;
-    margin: 15px;
-    border-radius: 5px;
-    background: linear-gradient(
-        90deg,
-        #eee 30%,
-        #fff 50%,
-        #eee 70%
-    );
-    background-size: 200% 100%;
-    animation: loading 0.8s linear infinite;
-}
-
-@keyframes loading {
-    from { background-position: 100% 0; }
-    to   { background-position: -100% 0; }
-}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton Loading</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
-<div class="skeleton" style="height:150px"></div>
-<div class="skeleton"></div><br />
-<div class="skeleton" style="height:150px"></div>
-<div class="skeleton"></div>
-<div class="skeleton"></div>
+<header>Uralbek UZ</header>
+
+<main class="container">
+
+    <!-- Yuklanish animatsiyasi -->
+    <section id="loading">
+        <div class="skeleton title"></div>
+        <div class="skeleton line"></div>
+        <div class="skeleton line"></div>
+        <div class="skeleton line short"></div>
+        <div class="skeleton image"></div>
+        <div class="skeleton line"></div>
+        <div class="skeleton line short"></div>
+    </section>
+
+    <!-- Haqiqiy kontent -->
+    <article id="content" hidden>
+        <h1 id="page-title"></h1>
+        <div id="page-text"></div>
+    </article>
+
+    <p id="error" hidden>
+        JSON ma'lumotini yuklab bo'lmadi.
+    </p>
+
+</main>
 
 </body>
 </html>
