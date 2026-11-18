@@ -30,7 +30,7 @@ body{margin:0}a{text-decoration:none}
     }
     }
 }
-@media (min-width: 240px) {
+@media (max-width: 240px) {
     .240 {
         display: none;
     }
