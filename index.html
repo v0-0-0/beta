@@ -87,7 +87,23 @@ href="https://beta-uralbek.uz/">
 
 
 
+<div id="screen-info"></div>
 
+<script>
+function screenInfo() {
+    document.getElementById("screen-info").innerHTML =
+        "Ekran kengligi: " + window.innerWidth + " CSS px<br>" +
+        "Ekran balandligi: " + window.innerHeight + " CSS px<br>" +
+        "Piksel nisbati: " + window.devicePixelRatio + "<br>" +
+        "Vizual kenglik: " +
+        Math.round(window.visualViewport.width) + " CSS px";
+}
+
+screenInfo();
+
+window.addEventListener("resize", screenInfo);
+window.visualViewport.addEventListener("resize", screenInfo);
+</script>
 
 
 
