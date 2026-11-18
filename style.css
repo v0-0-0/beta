@@ -4,8 +4,7 @@ body{margin:0}a{text-decoration:none}
 
 /* 0–240px */
 @media (max-width: 240px) {
-    .240 {
-        .top240 {
+    .top240 {
         position: fixed;
         width: 100%;
         z-index: 1;
