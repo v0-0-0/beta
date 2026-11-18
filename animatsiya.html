@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skeleton Loading Test</title>
+
+<style>
+
+/* UMUMIY */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    height: 55px;
+    background: white;
+    padding: 18px;
+    font-weight: bold;
+    box-shadow: 0 1px 4px #ccc;
+}
+
+/* LAYOUT */
+.layout {
+    display: flex;
+    min-height: 500px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: white;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 20px;
+    min-width: 0;
+}
+
+/* POST */
+.post {
+    background: white;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+/* SKELETON */
+.skeleton {
+    background: #e5e5e5;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.skeleton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.7),
+        transparent
+    );
+    animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* SKELETON ELEMENTS */
+.sk-title {
+    width: 60%;
+    height: 22px;
+    margin-bottom: 20px;
+}
+
+.sk-line {
+    width: 100%;
+    height: 12px;
+    margin-bottom: 12px;
+}
+
+.sk-short {
+    width: 65%;
+}
+
+.sk-image {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 15px;
+}
+
+.sk-menu {
+    height: 13px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+/* LOADING VA CONTENT */
+#skeleton {
+    display: block;
+}
+
+#real-content {
+    display: none;
+}
+
+/* FOOTER */
+footer {
+    background: white;
+    padding: 25px;
+    text-align: center;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .sidebar {
+        width: 110px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    .post {
+        padding: 12px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    Uralbek UZ
+</header>
+
+<div class="layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div id="skeleton">
+            <div class="skeleton sk-menu"></div>
+            <div class="skeleton sk-menu"></div>
+            <div class="skeleton sk-menu"></div>
+            <div class="skeleton sk-menu"></div>
+        </div>
+
+        <div id="real-menu" style="display:none">
+            <p>Link 1</p>
+            <p>Link 2</p>
+            <p>Link 3</p>
+            <p>Link 4</p>
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="content">
+
+        <!-- SKELETON -->
+        <div id="skeleton-content">
+
+            <div class="post">
+                <div class="skeleton sk-title"></div>
+                <div class="skeleton sk-line"></div>
+                <div class="skeleton sk-line"></div>
+                <div class="skeleton sk-line sk-short"></div>
+            </div>
+
+            <div class="post">
+                <div class="skeleton sk-title"></div>
+                <div class="skeleton sk-image"></div>
+                <div class="skeleton sk-line"></div>
+                <div class="skeleton sk-line sk-short"></div>
+            </div>
+
+            <div class="post">
+                <div class="skeleton sk-title"></div>
+                <div class="skeleton sk-line"></div>
+                <div class="skeleton sk-line"></div>
+                <div class="skeleton sk-line sk-short"></div>
+            </div>
+
+        </div>
+
+        <!-- HAQIQIY KONTENT -->
+        <div id="real-content">
+
+            <div class="post">
+                <h2>Uralbek UZ</h2>
+                <p>
+                    Uralbek UZ — bilim, fan, texnologiya
+                    va boshqa sohalarga oid axborot platformasi.
+                </p>
+            </div>
+
+            <div class="post">
+                <h2>Adabiyot</h2>
+                <p>
+                    Adabiyot inson tafakkuri va ma'naviy
+                    dunyosini boyituvchi san'at turidir.
+                </p>
+            </div>
+
+            <div class="post">
+                <h2>Dasturlash</h2>
+                <p>
+                    HTML, CSS va JavaScript yordamida
+                    veb-saytlar yaratish mumkin.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<footer>
+    © Uralbek UZ
+</footer>
+
+<script>
+
+// 2,5 sekunddan keyin kontentni ko'rsatish
+window.addEventListener("load", function() {
+
+    setTimeout(function() {
+
+        document.getElementById("skeleton-content").style.display = "none";
+        document.getElementById("real-content").style.display = "block";
+
+        document.getElementById("skeleton").style.display = "none";
+        document.getElementById("real-menu").style.display = "block";
+
+    }, 2500);
+
+});
+
+</script>
+
+</body>
+</html>
