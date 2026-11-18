@@ -30,9 +30,11 @@ body{margin:0}a{text-decoration:none}
     }
     }
 }
-
-
-@media 
+@media (min-width: 993px) {
+    .240 {
+        display: none;
+    }
+}
 
 
 
