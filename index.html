@@ -58,6 +58,21 @@ content="Izlagan imkon topadi, izlamagan bahona...">
   "inLanguage": "uz"
 }
 </script>
+<!-- PWA --
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/service-worker.js");
+  });
+}
+
+if (
+  window.matchMedia("(display-mode: standalone)").matches ||
+  window.navigator.standalone === true
+) {
+  document.documentElement.classList.add("pwa-mode");
+}
+</script>
 
 </head><body>
 
